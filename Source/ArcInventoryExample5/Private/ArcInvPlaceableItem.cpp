@@ -99,7 +99,7 @@ void AArcInvPlaceableItem::PostEditChangeProperty(FPropertyChangedEvent& Propert
 					return Fragment->FragmentTags.HasTag(FArcInvWorldItemMeshTag);
 					}))
 				{
-					EditorStaticMesh->SetStaticMesh(SMFragment->Mesh);
+					EditorStaticMesh->SetStaticMesh(SMFragment->Mesh.Get());
 				}
 			}
 		}

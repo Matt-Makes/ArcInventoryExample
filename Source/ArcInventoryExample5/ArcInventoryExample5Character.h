@@ -43,7 +43,8 @@ public:
 public:
 	AArcInventoryExample5Character(const FObjectInitializer& ObjectInitializer);
 	
-	virtual UArcInventoryComponent* GetInventoryComponent() const override { return InventoryComponent; }
+	virtual UArcInventoryComponent_Modular* GetInventoryComponent() const override { return Cast<UArcInventoryComponent_Modular>(InventoryComponent); }
+	//virtual UArcInventoryComponent_Modular* GetInventoryComponent() const override;
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override { return AbilitySystemComponent; }
 
 protected:
